@@ -31,6 +31,23 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
+require("nvim-ts-autotag").setup()
+require('lorem').opts {
+    sentence_length = "mixed",  -- using a default configuration
+    comma_chance = 0.3,  -- 30% chance to insert a comma
+    max_commas = 2  -- maximum 2 commas per sentence
+}
+
+-- or
+
+require('lorem').opts {
+    sentence_length = { -- custom configuration
+      w_per_sentence = 8,
+      s_per_paragraph = 6
+    },
+    comma_chance = 0.3,  -- 30% chance to insert a comma
+    max_commas = 2  -- maximum 2 commas per sentence
+}
 
 vim.schedule(function()
   require "mappings"

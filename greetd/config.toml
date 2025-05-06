@@ -1,0 +1,12 @@
+# Use VT1 for the greeter
+[terminal]
+vt = 1
+
+# Default greeter session: launch Hyprland with our custom config
+[default_session]
+command = "Hyprland --config /etc/greetd/hyprland.conf"
+user = "greeter"
+
+[initial_session]
+command = "Hyprland"
+user = "anemon"

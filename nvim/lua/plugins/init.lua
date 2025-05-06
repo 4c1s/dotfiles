@@ -20,8 +20,54 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
-  }
+  },
 
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      animeate = { enabled = true },
+      bigfile = { enabled = true },
+      dashboard = { enabled = true },
+      explorer = { enabled = true },
+      indent = { enabled = true },
+      input = { enabled = true },
+      picker = { enabled = true },
+      notifier = { enabled = true },
+      quickfile = { enabled = true },
+      scope = { enabled = true },
+      scroll = { enabled = true },
+      statuscolumn = { enabled = true },
+      words = { enabled = true },
+      zen = { enabled = true },
+    },
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+  },
+
+  {
+    "derektata/lorem.nvim",
+    config = function()
+      require("lorem").opts {
+        sentence_length = "medium",
+        comma_chance = 0.2,
+        max_commas = 2,
+      }
+    end,
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

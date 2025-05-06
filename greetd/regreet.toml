@@ -1,0 +1,22 @@
+# /etc/greetd/regreet.toml
+
+[background]
+path = "/etc/greetd/wallpaper/advanture.png"
+fit  = "Contain"
+
+[GTK]
+theme_name = "Juno-palenight-v40"
+
+# Pass these into the session after login:
+[env]
+XDG_SESSION_DESKTOP         = "Hyprland"
+XDG_CURRENT_DESKTOP         = "Hyprland"
+XDG_SESSION_TYPE            = "wayland"
+QT_QPA_PLATFORM             = "wayland"
+SDL_VIDEODRIVER             = "wayland"
+_JAVA_AWT_WM_NONREPARENTING = "1"
+GTK_USE_PORTAL              = "0"
+GDK_DEBUG                   = "no-portals"
+# (you can leave the rest of the sample file as-is, or tweak
+# GTK theme, clock format, commands, etc.)
+
