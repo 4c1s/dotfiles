@@ -4,7 +4,8 @@ local options = {
     cmake = { "cmakelang" },
     css = { "prettier" },
     html = { "prettier" },
-    bash = { "beautysh" },
+    bash = { "shfmt" },
+    json = { "fixjson" },
   },
 
   -- format_on_save = {

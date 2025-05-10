@@ -44,6 +44,8 @@ return {
       indent = { enabled = true },
       input = { enabled = true },
       picker = { enabled = true },
+      git = { enabled = true },
+      gitbrowse = { enabled = true },
       notifier = { enabled = true },
       quickfile = { enabled = true },
       scope = { enabled = true },
