@@ -1,0 +1,21 @@
+[Colors:View]
+BackgroundNormal=#00000000
+
+[General]
+TerminalApplication=kitty
+
+[Icons]
+Theme=Will be overwritten on themeswitch
+
+[KDE]
+ShowDeleteCommand=false
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
+[UiSettings]
+ColorScheme=colors
+
+[Wallet]
+Enabled=false
