@@ -1,9 +1,9 @@
 {
     "layer": "bottom", // Places Waybar below windows, but see note below
     "position": "top", // Positions Waybar at the top of the screen
-    "modules-left": ["custom/artix","hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["cava", "network", "battery", "tray", "clock"],
+    "modules-left": ["custom/artix","hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "battery", "tray", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -11,9 +11,6 @@
         "persistent-workspaces": {
             "*": 3 
         }
-    },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
     },
     "clock": {
         "format-alt": "{:%Y-%m-%d}"
@@ -37,3 +34,6 @@
         "on-click": "wlogout"
     }
 }
+// "hyprland/submap": {
+//   "format": "<span style=\"italic\">{}</span>"
+// },

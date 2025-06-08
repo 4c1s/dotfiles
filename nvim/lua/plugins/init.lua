@@ -1,5 +1,12 @@
 return {
   {
+    "andweeb/presence.nvim",
+    config = function()
+      require("presence").setup()
+    end,
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
@@ -61,6 +68,15 @@ return {
   },
 
   {
+    "MysticalDevil/inlay-hints.nvim",
+    event = "LspAttach",
+    dependencies = { "neovim/nvim-lspconfig" },
+    config = function()
+      require("inlay-hints").setup()
+    end,
+  },
+
+  {
     "derektata/lorem.nvim",
     config = function()
       require("lorem").opts {
@@ -70,6 +86,19 @@ return {
       }
     end,
   },
+
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+    enabled = true,
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

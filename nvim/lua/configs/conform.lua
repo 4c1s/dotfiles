@@ -1,11 +1,17 @@
 local options = {
   formatters_by_ft = {
+    c = { "clang-format" },
+    cpp = { "clang-format" },
     lua = { "stylua" },
-    cmake = { "cmakelang" },
+    -- cmake = { "cmakelang" },
     css = { "prettier" },
     html = { "prettier" },
     bash = { "shfmt" },
     json = { "fixjson" },
+    javascript = { "biome" },
+    typescript = { "biome" },
+    tsx = { "biome" },
+    python = { "black" },
   },
 
   -- format_on_save = {

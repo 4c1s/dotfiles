@@ -1,13 +1,12 @@
 * {
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: FontAwesome, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 0.9125rem; /* 13px */
 }
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+  transition: background-color 0.5s;
 }
 
 window#waybar.hidden {
@@ -15,91 +14,93 @@ window#waybar.hidden {
 }
 
 button {
-  box-shadow: inset 0 -3px transparent;
+  box-shadow: inset 0 -0.1875rem transparent; /* 3px */
   border: none;
   border-radius: 0;
 }
 
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -0.1875rem #ffffff; /* 3px */
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 7px 7px 0;
+  padding: 0.5375rem 0.6375rem 0; /* 7px 7px 0 */
 }
 
 #window {
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 0.3125rem; /* 5px */
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
   background-color: #0d1b2a;
   color: #ffffff;
 }
 
 #custom-artix {
-  padding: 5px 5px 5px 8px;
-  margin-right: 3px;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.5rem; /* 5px 5px 5px 8px */
+  margin-right: 0.1875rem; /* 3px */
   background-color: #0d1b2a;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 0.3125rem; /* 5px */
 }
 
-/* Set a background for the workspaces container */
+#custom-artix:hover {
+  color: skyblue;
+}
+
 #workspaces {
-  background-color: #0d1b2a; /* Matches the typical module background color */
-  border-radius: 5px; /* Optional: rounds the entire workspace bar */
+  background-color: #0d1b2a;
+  border-radius: 0.3125rem; /* 5px */
 }
 
-/* Style all workspace buttons */
 #workspaces button {
-  background-color: transparent; /* Shows the #workspaces background */
+  background-color: transparent;
   color: #ffffff;
-  padding: 0 5px;
+  padding: 0 0.4125rem; /* 0 5px */
 }
 
-/* Style the active (focused) workspace button */
 #workspaces button.active {
-  background: inherit; /* Inherits from #workspaces, so #0d1b2a */
-  box-shadow: inset 0 -3px #ffffff; /* Adds the white underline */
+  background: inherit;
+  color: #ffd700;
+  box-shadow: inset 0 -3px 0 #ffffff;
+  /* box-shadow: inset 0 -0.1875rem #ffffff; */
 }
 
-/* Optional: Adjust hover effect for non-focused buttons */
 #workspaces button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
-  color: #ffd700; /* Changes text to gold on hover for interactivity */
+  box-shadow: inset 0 -0.1875rem #ffffff; /* 3px */
+  color: #ffd700;
 }
 
 #workspaces button:first-child {
-  border-radius: 5px 0 0 5px;
+  border-radius: 0.3125rem 0 0 0.3125rem; /* 5px */
 }
 
 #workspaces button:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 0.3125rem 0.3125rem 0; /* 5px */
 }
 
 #submap {
   background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -0.1875rem #ffffff; /* 3px */
 }
 
 #network,
 #battery,
 #tray,
 #clock {
-  padding: 0 10px;
+  padding: 0 0.625rem; /* 0 10px */
   color: #ffffff;
   background-color: #0d1b2a;
 }
 
 #network {
-  border-radius: 7px 0 0 7px;
+  border-radius: 0.4375rem 0 0 0.4375rem; /* 7px */
 }
 
 #clock {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 0.4375rem 0.4375rem 0; /* 7px */
 }
 
 @keyframes blink {
@@ -112,9 +113,5 @@ button:hover {
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
   color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: blink 0.5s steps(12) infinite alternate;
 }
