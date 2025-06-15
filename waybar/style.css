@@ -1,6 +1,6 @@
 * {
   font-family: FontAwesome, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 0.9125rem; /* 13px */
+  font-size: 15px; /* 13px */
 }
 
 window#waybar {
@@ -33,14 +33,14 @@ button:hover {
 #window {
   border-radius: 0.3125rem; /* 5px */
   padding: 0.3125rem 0.625rem; /* 5px 10px */
-  background-color: #0d1b2a;
+  background-color: #1e1e1e;
   color: #ffffff;
 }
 
 #custom-artix {
   padding: 0.3125rem 0.3125rem 0.3125rem 0.5rem; /* 5px 5px 5px 8px */
   margin-right: 0.1875rem; /* 3px */
-  background-color: #0d1b2a;
+  background-color: #1e1e1e;
   color: #ffffff;
   border-radius: 0.3125rem; /* 5px */
 }
@@ -50,7 +50,7 @@ button:hover {
 }
 
 #workspaces {
-  background-color: #0d1b2a;
+  background-color: #1e1e1e;
   border-radius: 0.3125rem; /* 5px */
 }
 
@@ -92,7 +92,7 @@ button:hover {
 #clock {
   padding: 0 0.625rem; /* 0 10px */
   color: #ffffff;
-  background-color: #0d1b2a;
+  background-color: #1e1e1e;
 }
 
 #network {

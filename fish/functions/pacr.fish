@@ -1,4 +1,4 @@
-function pacr --wraps='sudo pacman -R' --description 'alias pacr sudo pacman -R'
-  sudo pacman -R $argv
+function pacr --wraps='sudo pacman -R' --wraps='yay -Rns' --description 'alias pacr yay -Rns'
+  yay -Rns $argv
         
 end
